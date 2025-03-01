@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const { puppeteer, getLaunchOptions } = require('../utils/puppeteerAdapter');
 const cheerio = require('cheerio');
 
 /**
@@ -19,17 +19,8 @@ class DramaService {
       const url = `https://mydramalist.com/search?q=${encodeURIComponent(query)}&adv=titles&so=relevance`;
       console.log(`Search URL: ${url}`);
       
-      browser = await puppeteer.launch({
-        headless: 'new',
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage',
-          '--disable-accelerated-2d-canvas',
-          '--disable-gpu',
-          '--window-size=1920x1080'
-        ]
-      });
+      const options = await getLaunchOptions();
+      browser = await puppeteer.launch(options);
       
       const page = await browser.newPage();
       
@@ -169,17 +160,8 @@ class DramaService {
       const url = `https://mydramalist.com/${id}`;
       console.log(`Drama URL: ${url}`);
       
-      browser = await puppeteer.launch({
-        headless: 'new',
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage',
-          '--disable-accelerated-2d-canvas',
-          '--disable-gpu',
-          '--window-size=1920x1080'
-        ]
-      });
+      const options = await getLaunchOptions();
+      browser = await puppeteer.launch(options);
       
       const page = await browser.newPage();
       
@@ -375,17 +357,8 @@ class DramaService {
       const url = `https://mydramalist.com/${id}/cast`;
       console.log(`Cast URL: ${url}`);
       
-      browser = await puppeteer.launch({
-        headless: 'new',
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage',
-          '--disable-accelerated-2d-canvas',
-          '--disable-gpu',
-          '--window-size=1920x1080'
-        ]
-      });
+      const options = await getLaunchOptions();
+      browser = await puppeteer.launch(options);
       
       const page = await browser.newPage();
       
@@ -467,17 +440,8 @@ class DramaService {
       const url = `https://mydramalist.com/${id}/recommendations`;
       console.log(`Recommendations URL: ${url}`);
       
-      browser = await puppeteer.launch({
-        headless: 'new',
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage',
-          '--disable-accelerated-2d-canvas',
-          '--disable-gpu',
-          '--window-size=1920x1080'
-        ]
-      });
+      const options = await getLaunchOptions();
+      browser = await puppeteer.launch(options);
       
       const page = await browser.newPage();
       
@@ -545,17 +509,8 @@ class DramaService {
       const url = `https://mydramalist.com/${id}/reviews`;
       console.log(`Reviews URL: ${url}`);
       
-      browser = await puppeteer.launch({
-        headless: 'new',
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage',
-          '--disable-accelerated-2d-canvas',
-          '--disable-gpu',
-          '--window-size=1920x1080'
-        ]
-      });
+      const options = await getLaunchOptions();
+      browser = await puppeteer.launch(options);
       
       const page = await browser.newPage();
       
