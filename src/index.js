@@ -23,7 +23,7 @@ app.use('/api/dramas', dramaRoutes);
 
 // Health check endpoint for Docker
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'ok' });
+  res.status(200).json({ status: 'ok', version: '1.0.0', timestamp: new Date().toISOString() });
 });
 
 // Default route

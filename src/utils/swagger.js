@@ -19,12 +19,20 @@ const swaggerOptions = {
       }
     },
     servers: [
-      {
-        url: 'https://mdl-scrapping.geanpedro.com.br',
-        description: 'Development server'
-      }
+        {
+          url: 'https://mdl-scrapping.geanpedro.com.br',
+          description: 'Production server'
+        },
+        {
+          url: 'http://localhost:3000',
+          description: 'Local server'
+        }
     ],
     tags: [
+      {
+        name: 'Health',
+        description: 'API health endpoints'
+      },
       {
         name: 'Dramas',
         description: 'Operations related to dramas'
