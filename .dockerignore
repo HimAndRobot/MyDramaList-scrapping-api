@@ -1,0 +1,47 @@
+# Dependências
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Sistema de controle de versão
+.git
+.gitignore
+.gitattributes
+
+# Ambiente
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Vercel (não mais usado)
+.vercel
+vercel.json
+
+# Documentação
+*.md
+LICENSE
+
+# Ferramentas de desenvolvimento
+.vscode
+.idea
+.DS_Store
+*.log
+*.swp
+*.swo
+
+# Arquivos temporários
+tmp
+temp
+*.tmp
+debug-screenshot.png
+
+# Testes
+__tests__
+test
+tests
+coverage 

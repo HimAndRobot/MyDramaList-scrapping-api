@@ -21,6 +21,11 @@ app.use('/api-docs', swagger.serve, swagger.setup);
 // Routes
 app.use('/api/dramas', dramaRoutes);
 
+// Health check endpoint for Docker
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 // Default route
 app.get('/', (req, res) => {
   res.json({ 
