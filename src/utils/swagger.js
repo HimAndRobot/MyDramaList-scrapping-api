@@ -20,7 +20,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:3001',
+        url: 'https://mdl-scrapping.geanpedro.com.br',
         description: 'Development server'
       }
     ],
