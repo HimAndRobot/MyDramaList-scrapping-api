@@ -39,8 +39,8 @@ This API allows you to search and retrieve detailed information about Asian dram
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/mdl-scrapping.git
-   cd mdl-scrapping
+   git clone https://github.com/HimAndRobot/MyDramaList-scrapping-api.git
+   cd MyDramaList-scrapping-api
    ```
 
 2. Install dependencies:
